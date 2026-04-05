@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashraf Amr | Machine Learning Engineer</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: '#050814',
+                        card: 'rgba(17, 24, 39, 0.7)',
+                        cyan: { 400: '#00f0ff' },
+                        purple: { 500: '#8a2be2' }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #050814;
+            color: #e2e8f0;
+        }
+
+        /* Glassmorphism & Glow Effects */
+        .glass-card {
+            background: rgba(13, 17, 29, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 240, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            border-color: rgba(0, 240, 255, 0.5);
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.15), inset 0 0 10px rgba(138, 43, 226, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #00f0ff, #8a2be2);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #050814;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #8a2be2;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00f0ff;
+        }
+
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-cyan-400 selection:text-dark">
+
+    <nav class="fixed w-full z-50 glass-card !border-x-0 !border-t-0 !rounded-none">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="#" class="font-display font-bold text-2xl tracking-wider text-white">
+                    Ashraf<span class="text-cyan-400">.AI</span>
+                </a>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#about" class="hover:text-cyan-400 transition-colors duration-300">About</a>
+                        <a href="#experience" class="hover:text-cyan-400 transition-colors duration-300">Experience</a>
+                        <a href="#projects" class="hover:text-cyan-400 transition-colors duration-300">Projects</a>
+                        <a href="#contact"
+                            class="px-5 py-2 rounded-full border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-dark transition-all duration-300 shadow-[0_0_10px_rgba(0,240,255,0.3)]">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <div id="particles-js"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 text-center md:text-left" data-aos="fade-right" data-aos-duration="1000">
+                <p class="text-cyan-400 font-mono mb-2 tracking-wide">HELLO, WORLD.</p>
+                <h1 class="font-display text-5xl md:text-7xl font-bold mb-4 text-white leading-tight">
+                    Machine Learning <br />
+                    <span class="text-gradient">Portfolio</span>
+                </h1>
+                <div class="text-xl md:text-2xl text-gray-300 mb-8 h-12">
+                    <span class="font-light">I am a </span>
+                    <span id="typed-text" class="font-semibold text-cyan-400"></span>
+                </div>
+                <p class="text-gray-400 mb-8 max-w-lg mx-auto md:mx-0">
+                    Building intelligent systems and solving real-world problems using cutting-edge AI technologies.
+                </p>
+                <div class="flex gap-4 justify-center md:justify-start">
+                    <a href="#projects"
+                        class="px-8 py-3 rounded-full bg-gradient-to-r from-cyan-400 to-purple-600 text-white font-semibold hover:scale-105 transition-transform duration-300 shadow-[0_0_20px_rgba(138,43,226,0.4)]">
+                        View My Work
+                    </a>
+                    <a href="https://github.com/Ashrafamr11" target="_blank"
+                        class="px-8 py-3 rounded-full glass-card hover:text-cyan-400 transition-colors flex items-center gap-2">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+
+            <div class="md:w-1/2 mt-16 md:mt-0 flex justify-center" data-aos="fade-left" data-aos-duration="1000">
+                <div
+                    class="relative w-64 h-64 md:w-80 md:h-80 rounded-full p-1 bg-gradient-to-br from-cyan-400 to-purple-600 shadow-[0_0_40px_rgba(0,240,255,0.3)] animate-[spin_10s_linear_infinite]">
+                    <div
+                        class="w-full h-full rounded-full bg-dark overflow-hidden border-4 border-dark animate-[spin_10s_linear_infinite_reverse]">
+                        <img src="portfolio.jpg" alt="Ashraf Amr"
+                            class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-display text-4xl font-bold text-white mb-2">Initialize <span
+                        class="text-cyan-400">Profile</span></h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <div class="glass-card p-8 rounded-2xl" data-aos="fade-right">
+                    <h3 class="text-2xl font-display font-semibold text-white mb-4"><i
+                            class="fas fa-terminal text-cyan-400 mr-2"></i> About Me</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        "Hi, I'm Ashraf Amr, a Machine Learning Engineer passionate about building intelligent systems
+                        and solving real-world problems using AI."
+                    </p>
+                    <p class="text-gray-300 leading-relaxed">
+                        I specialize in Machine Learning, Deep Learning, and Data Analysis using Python. I enjoy turning
+                        complex data into actionable insights and building models that deliver real impact. As a
+                        top-performing student in my cohort, I am continually pushing the boundaries of what I can
+                        engineer.
+                    </p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl relative overflow-hidden" data-aos="fade-left">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-purple-500/10 rounded-full blur-3xl"></div>
+                    <h3 class="text-2xl font-display font-semibold text-white mb-6"><i
+                            class="fas fa-graduation-cap text-purple-400 mr-2"></i> Education</h3>
+
+                    <div class="border-l-2 border-cyan-400/30 pl-6 relative">
+                        <div
+                            class="absolute w-4 h-4 bg-cyan-400 rounded-full -left-[9px] top-1 shadow-[0_0_10px_#00f0ff]">
+                        </div>
+                        <h4 class="text-xl font-bold text-white">Bachelor's in Computer Science</h4>
+                        <p class="text-cyan-400 text-sm mb-3">Expected Graduation: 2026</p>
+                        <div class="text-gray-400 text-sm">
+                            <p class="mb-2 font-semibold text-gray-300">Relevant Coursework:</p>
+                            <ul class="list-none space-y-1">
+                                <li><i class="fas fa-angle-right text-cyan-400 text-xs mr-2"></i>Machine Learning</li>
+                                <li><i class="fas fa-angle-right text-cyan-400 text-xs mr-2"></i>Deep Learning</li>
+                                <li><i class="fas fa-angle-right text-cyan-400 text-xs mr-2"></i>Data Science</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 bg-dark/50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16">
+
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <h2 class="font-display text-3xl font-bold text-white mb-8 border-b border-gray-800 pb-4">Experience
+                        Tracking</h2>
+
+                    <div class="glass-card p-6 rounded-xl mb-6 relative group">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-cyan-400/5 to-purple-500/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <h4 class="text-xl font-bold text-white">Machine Learning Intern</h4>
+                        <p class="text-cyan-400 mb-4">Syntecxhub</p>
+                        <ul class="text-gray-400 space-y-2 text-sm">
+                            <li class="flex items-start"><i class="fas fa-check-circle text-purple-400 mt-1 mr-3"></i>
+                                Worked on machine learning models and real-world datasets</li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-purple-400 mt-1 mr-3"></i>
+                                Applied advanced data preprocessing techniques</li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-purple-400 mt-1 mr-3"></i>
+                                Performed comprehensive model evaluation and optimization</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h2 class="font-display text-3xl font-bold text-white mb-8 border-b border-gray-800 pb-4">Neural
+                        Weights & Biases</h2>
+
+                    <div class="mb-8">
+                        <h4 class="text-gray-300 font-semibold mb-4 text-sm uppercase tracking-wider">Core Capabilities
+                        </h4>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="px-4 py-2 rounded-lg glass-card text-sm text-cyan-100 hover:text-cyan-400 cursor-default">Machine
+                                Learning</span>
+                            <span
+                                class="px-4 py-2 rounded-lg glass-card text-sm text-cyan-100 hover:text-cyan-400 cursor-default">Deep
+                                Learning</span>
+                            <span
+                                class="px-4 py-2 rounded-lg glass-card text-sm text-cyan-100 hover:text-cyan-400 cursor-default">Data
+                                Analysis</span>
+                            <span
+                                class="px-4 py-2 rounded-lg glass-card text-sm text-cyan-100 hover:text-cyan-400 cursor-default">NLP</span>
+                            <span
+                                class="px-4 py-2 rounded-lg glass-card text-sm text-cyan-100 hover:text-cyan-400 cursor-default">Computer
+                                Vision</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-gray-300 font-semibold mb-4 text-sm uppercase tracking-wider">Tool Stack</h4>
+                        <div class="flex flex-wrap gap-4 text-2xl text-gray-500">
+                            <div class="flex flex-col items-center gap-2 group"><i
+                                    class="fab fa-python group-hover:text-[#3776AB] transition-colors"></i><span
+                                    class="text-xs">Python</span></div>
+                            <div class="flex flex-col items-center gap-2 group"><i
+                                    class="fas fa-brain group-hover:text-[#FF6F00] transition-colors"></i><span
+                                    class="text-xs">TensorFlow</span></div>
+                            <div class="flex flex-col items-center gap-2 group"><i
+                                    class="fas fa-fire group-hover:text-[#EE4C2C] transition-colors"></i><span
+                                    class="text-xs">PyTorch</span></div>
+                            <div class="flex flex-col items-center gap-2 group"><i
+                                    class="fas fa-network-wired group-hover:text-[#F7931E] transition-colors"></i><span
+                                    class="text-xs">Scikit-learn</span></div>
+                            <div class="flex flex-col items-center gap-2 group"><i
+                                    class="fas fa-database group-hover:text-[#150458] transition-colors"></i><span
+                                    class="text-xs">Pandas/NumPy</span></div>
+                            <div class="flex flex-col items-center gap-2 group"><i
+                                    class="fas fa-chart-bar group-hover:text-[#F2C811] transition-colors"></i><span
+                                    class="text-xs">Power BI</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-display text-4xl font-bold text-white mb-2">Model <span
+                        class="text-cyan-400">Deployments</span></h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="glass-card rounded-2xl overflow-hidden flex flex-col h-full" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div class="h-48 bg-gray-800 relative overflow-hidden group">
+                        <div class="absolute inset-0 bg-gradient-to-br from-cyan-900/40 to-purple-900/40 z-10"></div>
+                        <div class="absolute inset-0 flex items-center justify-center text-4xl text-cyan-400/50"><i
+                                class="fas fa-user-graduate"></i></div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-white mb-2">Student Performance Prediction</h3>
+                        <p class="text-gray-400 text-sm mb-4 flex-1">Built a robust machine learning model to analyze
+                            educational metrics and accurately predict student performance.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs font-mono px-2 py-1 bg-cyan-400/10 text-cyan-400 rounded">Accuracy:
+                                ~85%</span>
+                            <span
+                                class="text-xs font-mono px-2 py-1 bg-purple-400/10 text-purple-400 rounded">Scikit-learn</span>
+                        </div>
+                        <a href="#"
+                            class="mt-auto w-full py-2 text-center text-sm font-semibold text-white border border-cyan-400/30 rounded hover:bg-cyan-400/10 transition-colors">View
+                            Project</a>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-2xl overflow-hidden flex flex-col h-full" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <div class="h-48 bg-gray-800 relative overflow-hidden group">
+                        <div class="absolute inset-0 bg-gradient-to-br from-cyan-900/40 to-purple-900/40 z-10"></div>
+                        <div class="absolute inset-0 flex items-center justify-center text-4xl text-purple-400/50"><i
+                                class="fas fa-comment-dots"></i></div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-white mb-2">Sentiment Analysis Model</h3>
+                        <p class="text-gray-400 text-sm mb-4 flex-1">Developed an NLP model tailored for classifying
+                            text sentiment, allowing for scalable subjective data analysis.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs font-mono px-2 py-1 bg-cyan-400/10 text-cyan-400 rounded">NLP</span>
+                            <span
+                                class="text-xs font-mono px-2 py-1 bg-purple-400/10 text-purple-400 rounded">TensorFlow</span>
+                        </div>
+                        <a href="#"
+                            class="mt-auto w-full py-2 text-center text-sm font-semibold text-white border border-cyan-400/30 rounded hover:bg-cyan-400/10 transition-colors">View
+                            Project</a>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-2xl overflow-hidden flex flex-col h-full" data-aos="fade-up"
+                    data-aos-delay="300">
+                    <div class="h-48 bg-gray-800 relative overflow-hidden group">
+                        <div class="absolute inset-0 bg-gradient-to-br from-cyan-900/40 to-purple-900/40 z-10"></div>
+                        <div class="absolute inset-0 flex items-center justify-center text-4xl text-cyan-400/50"><i
+                                class="fas fa-image"></i></div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-white mb-2">Image Classification System</h3>
+                        <p class="text-gray-400 text-sm mb-4 flex-1">Engineered a deep learning model for high-accuracy
+                            image classification across complex visual datasets.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs font-mono px-2 py-1 bg-cyan-400/10 text-cyan-400 rounded">Computer
+                                Vision</span>
+                            <span
+                                class="text-xs font-mono px-2 py-1 bg-purple-400/10 text-purple-400 rounded">PyTorch</span>
+                        </div>
+                        <a href="#"
+                            class="mt-auto w-full py-2 text-center text-sm font-semibold text-white border border-cyan-400/30 rounded hover:bg-cyan-400/10 transition-colors">View
+                            Project</a>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-2xl overflow-hidden flex flex-col h-full lg:col-start-2"
+                    data-aos="fade-up" data-aos-delay="400">
+                    <div class="h-48 bg-gray-800 relative overflow-hidden group">
+                        <div class="absolute inset-0 bg-gradient-to-br from-cyan-900/40 to-purple-900/40 z-10"></div>
+                        <div class="absolute inset-0 flex items-center justify-center text-4xl text-purple-400/50"><i
+                                class="fas fa-cubes"></i></div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-white mb-2">Digital Egypt Cubs System</h3>
+                        <p class="text-gray-400 text-sm mb-4 flex-1">Submitted applied project work integrating
+                            engineering concepts and basic data analysis workflows.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs font-mono px-2 py-1 bg-cyan-400/10 text-cyan-400 rounded">Data
+                                Analysis</span>
+                            <span
+                                class="text-xs font-mono px-2 py-1 bg-purple-400/10 text-purple-400 rounded">Integration</span>
+                        </div>
+                        <a href="#"
+                            class="mt-auto w-full py-2 text-center text-sm font-semibold text-white border border-cyan-400/30 rounded hover:bg-cyan-400/10 transition-colors">View
+                            Project</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-dark/50 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-display text-4xl font-bold text-white mb-2">Available <span
+                        class="text-cyan-400">Services</span></h2>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass-card p-6 rounded-xl text-center hover:-translate-y-2 transition-transform"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-14 h-14 mx-auto bg-gradient-to-br from-cyan-400/20 to-transparent rounded-full flex items-center justify-center mb-4 text-cyan-400 text-2xl">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h4 class="text-white font-semibold mb-2">ML Model Development</h4>
+                </div>
+                <div class="glass-card p-6 rounded-xl text-center hover:-translate-y-2 transition-transform"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="w-14 h-14 mx-auto bg-gradient-to-br from-purple-500/20 to-transparent rounded-full flex items-center justify-center mb-4 text-purple-400 text-2xl">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h4 class="text-white font-semibold mb-2">Data Analysis & Viz</h4>
+                </div>
+                <div class="glass-card p-6 rounded-xl text-center hover:-translate-y-2 transition-transform"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="w-14 h-14 mx-auto bg-gradient-to-br from-cyan-400/20 to-transparent rounded-full flex items-center justify-center mb-4 text-cyan-400 text-2xl">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h4 class="text-white font-semibold mb-2">AI Training & Opt.</h4>
+                </div>
+                <div class="glass-card p-6 rounded-xl text-center hover:-translate-y-2 transition-transform"
+                    data-aos="fade-up" data-aos-delay="400">
+                    <div
+                        class="w-14 h-14 mx-auto bg-gradient-to-br from-purple-500/20 to-transparent rounded-full flex items-center justify-center mb-4 text-purple-400 text-2xl">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h4 class="text-white font-semibold mb-2">Python Solutions</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="
